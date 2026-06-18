@@ -8,62 +8,38 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            display: ['JetBrains Mono', 'monospace'],
-            mono: ['JetBrains Mono', 'monospace'],
-            body: ['Inter', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    html { color-scheme: dark; }
-    body { font-family: 'Inter', sans-serif; }
-    .font-display { font-family: 'JetBrains Mono', monospace; }
-    a:focus-visible { outline: 2px solid #F59E0B; outline-offset: 3px; border-radius: 2px; }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="bg-[#0D1117] text-[#E6EDF3] antialiased">
+<body>
 
   <!-- Hero -->
-  <header class="min-h-screen flex flex-col justify-center px-8 md:px-16 lg:px-24 py-20 max-w-screen-xl mx-auto">
-    <p class="text-xs font-medium tracking-[0.2em] uppercase text-[#F59E0B] mb-8"><span class="opacity-70">&gt;</span> Backend Developer · 10+ years</p>
-    <h1 class="font-display font-extrabold text-[clamp(3rem,12vw,9rem)] leading-[0.88] tracking-tight text-[#E6EDF3] mb-6">
-      Paolo<br>Montano
-    </h1>
-    <p class="text-base md:text-lg text-[#E6EDF3]/70 mb-10">Vancouver, BC · Open to remote</p>
-    <div class="flex flex-wrap items-center gap-1 -ml-3 mt-2">
+  <header class="hero container">
+    <p class="eyebrow hero-kicker"><span class="prompt">&gt;</span> Backend Developer · 10+ years</p>
+    <h1 class="hero-title">Paolo<br>Montano</h1>
+    <p class="hero-location">Vancouver, BC · Open to remote</p>
+    <div class="social-row">
 
       <!-- GitLab _pqm -->
       <a href="https://gitlab.com/_pqm" target="_blank" rel="noopener noreferrer"
-         class="flex items-center gap-2 p-3 text-[#E6EDF3] hover:text-[#F59E0B] transition-colors duration-200 group"
-         title="GitLab — Work (_pqm)">
+         class="social-link" title="GitLab — Work (_pqm)">
         <svg width="22" height="22" viewBox="0 0 380 380" fill="currentColor" aria-hidden="true">
           <path d="M282.83 170.73l-.27-.69-26.14-68.22a6.81 6.81 0 00-2.69-3.24 7 7 0 00-8 .43 7 7 0 00-2.32 3.52l-17.65 54H154.29l-17.65-54a6.86 6.86 0 00-2.32-3.52 7 7 0 00-8-.43 6.87 6.87 0 00-2.69 3.24L97.44 170l-.26.69a48.54 48.54 0 0016.1 56.1l.09.07.24.17 39.82 29.82 19.7 14.91 12 9.06a8.07 8.07 0 009.76 0l12-9.06 19.7-14.91 40.06-30 .1-.08a48.56 48.56 0 0016.08-56.04z"/>
         </svg>
-        <span class="text-xs font-medium tracking-tight opacity-60 group-hover:opacity-100 transition-opacity duration-200">GitLab · Work</span>
+        <span class="social-label">GitLab · Work</span>
       </a>
 
       <!-- GitLab .paolo -->
       <a href="https://gitlab.com/.paolo" target="_blank" rel="noopener noreferrer"
-         class="flex items-center gap-2 p-3 text-[#E6EDF3] hover:text-[#F59E0B] transition-colors duration-200 group"
-         title="GitLab — Personal (.paolo)">
+         class="social-link" title="GitLab — Personal (.paolo)">
         <svg width="22" height="22" viewBox="0 0 380 380" fill="currentColor" aria-hidden="true">
           <path d="M282.83 170.73l-.27-.69-26.14-68.22a6.81 6.81 0 00-2.69-3.24 7 7 0 00-8 .43 7 7 0 00-2.32 3.52l-17.65 54H154.29l-17.65-54a6.86 6.86 0 00-2.32-3.52 7 7 0 00-8-.43 6.87 6.87 0 00-2.69 3.24L97.44 170l-.26.69a48.54 48.54 0 0016.1 56.1l.09.07.24.17 39.82 29.82 19.7 14.91 12 9.06a8.07 8.07 0 009.76 0l12-9.06 19.7-14.91 40.06-30 .1-.08a48.56 48.56 0 0016.08-56.04z"/>
         </svg>
-        <span class="text-xs font-medium tracking-tight opacity-60 group-hover:opacity-100 transition-opacity duration-200">GitLab · Personal</span>
+        <span class="social-label">GitLab · Personal</span>
       </a>
 
       <!-- GitHub -->
       <a href="https://github.com/paolomontano" target="_blank" rel="noopener noreferrer"
-         class="inline-flex p-3 text-[#E6EDF3] hover:text-[#F59E0B] transition-colors duration-200"
-         title="GitHub" aria-label="GitHub">
+         class="social-link" title="GitHub" aria-label="GitHub">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
         </svg>
@@ -71,8 +47,7 @@
 
       <!-- LinkedIn -->
       <a href="https://www.linkedin.com/in/pao1o/" target="_blank" rel="noopener noreferrer"
-         class="inline-flex p-3 text-[#E6EDF3] hover:text-[#F59E0B] transition-colors duration-200"
-         title="LinkedIn" aria-label="LinkedIn">
+         class="social-link" title="LinkedIn" aria-label="LinkedIn">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
         </svg>
@@ -80,8 +55,7 @@
 
       <!-- Email -->
       <a href="mailto:contact@paolo.today"
-         class="inline-flex p-3 text-[#E6EDF3] hover:text-[#F59E0B] transition-colors duration-200"
-         title="Email" aria-label="Email">
+         class="social-link" title="Email" aria-label="Email">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M2 4a2 2 0 012-2h16a2 2 0 012 2v.511l-10 6.25L2 4.511V4zm0 2.697V20a2 2 0 002 2h16a2 2 0 002-2V6.697L12 12.947 2 6.697z"/>
         </svg>
@@ -91,67 +65,58 @@
   </header>
 
   <main>
-    <div class="max-w-screen-xl mx-auto px-8 md:px-16 lg:px-24">
-      <hr class="border-[#E6EDF3]/10" />
-    </div>
+    <div class="container"><hr class="rule" /></div>
 
     <!-- About -->
-    <section id="about" class="max-w-screen-xl mx-auto px-8 md:px-16 lg:px-24 py-20 md:py-28">
-      <h2 class="text-xs font-medium tracking-[0.2em] uppercase text-[#F59E0B] mb-10"><span class="opacity-70">&gt;</span> About</h2>
-      <div class="flex flex-col md:flex-row gap-10 md:gap-16 items-start">
-        <img src="images/avatar.jpg" alt="Paolo Montano"
-             class="w-24 h-24 md:w-28 md:h-28 rounded-full object-cover flex-shrink-0 ring-1 ring-[#E6EDF3]/10" />
-        <div class="max-w-2xl">
-          <p class="text-xl md:text-2xl leading-relaxed text-[#C9D1D9]">
+    <section id="about" class="section container">
+      <h2 class="eyebrow section-label"><span class="prompt">&gt;</span> About</h2>
+      <div class="about-grid">
+        <img src="images/avatar.jpg" alt="Paolo Montano" class="avatar" />
+        <div class="about-text">
+          <p class="about-lead">
             I build and maintain reliable backend systems, and care about writing code that's easy to reason about and built to last.
           </p>
-          <p class="text-base md:text-lg leading-relaxed text-[#E6EDF3]/60 mt-6">
+          <p class="about-note">
             Currently at Hushmail — open to senior backend roles, Vancouver or remote.
           </p>
         </div>
       </div>
     </section>
 
-    <div class="max-w-screen-xl mx-auto px-8 md:px-16 lg:px-24">
-      <hr class="border-[#E6EDF3]/10" />
-    </div>
+    <div class="container"><hr class="rule" /></div>
 
     <!-- Skills -->
-    <section id="skills" class="max-w-screen-xl mx-auto px-8 md:px-16 lg:px-24 py-20 md:py-28">
-      <h2 class="text-xs font-medium tracking-[0.2em] uppercase text-[#F59E0B] mb-10"><span class="opacity-70">&gt;</span> Skills</h2>
-      <div class="divide-y divide-[#E6EDF3]/10">
-        <div class="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-2 md:gap-10 items-baseline py-5 first:pt-0">
-          <p class="text-xs font-medium tracking-[0.2em] uppercase text-[#E6EDF3]/60">Languages &amp; Frameworks</p>
-          <p class="text-base md:text-lg text-[#C9D1D9] leading-relaxed">PHP, JavaScript, SQL, Bash, Zend Framework, Vue.js</p>
+    <section id="skills" class="section container">
+      <h2 class="eyebrow section-label"><span class="prompt">&gt;</span> Skills</h2>
+      <div class="skills-list">
+        <div class="skill-row">
+          <p class="skill-cat">Languages &amp; Frameworks</p>
+          <p class="skill-items">PHP, JavaScript, SQL, Bash, Zend Framework, Vue.js</p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-2 md:gap-10 items-baseline py-5">
-          <p class="text-xs font-medium tracking-[0.2em] uppercase text-[#E6EDF3]/60">Database &amp; Storage</p>
-          <p class="text-base md:text-lg text-[#C9D1D9] leading-relaxed">MySQL, SQLite, MongoDB, Redis</p>
+        <div class="skill-row">
+          <p class="skill-cat">Database &amp; Storage</p>
+          <p class="skill-items">MySQL, SQLite, MongoDB, Redis</p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-2 md:gap-10 items-baseline py-5 last:pb-0">
-          <p class="text-xs font-medium tracking-[0.2em] uppercase text-[#E6EDF3]/60">Tools &amp; Practices</p>
-          <p class="text-base md:text-lg text-[#C9D1D9] leading-relaxed">Git/GitLab, Docker, Ansible, Capistrano, Linux, REST APIs, Stripe, Payments, Caching, Cron jobs, Database Design, OOP, Code Review, automated testing &amp; static analysis (PHPUnit, PHPStan)</p>
+        <div class="skill-row">
+          <p class="skill-cat">Tools &amp; Practices</p>
+          <p class="skill-items">Git/GitLab, Docker, Ansible, Capistrano, Linux, REST APIs, Stripe, Payments, Caching, Cron jobs, Database Design, OOP, Code Review, automated testing &amp; static analysis (PHPUnit, PHPStan)</p>
         </div>
       </div>
     </section>
 
-    <div class="max-w-screen-xl mx-auto px-8 md:px-16 lg:px-24">
-      <hr class="border-[#E6EDF3]/10" />
-    </div>
+    <div class="container"><hr class="rule" /></div>
 
     <!-- Experience -->
-    <section id="experience" class="max-w-screen-xl mx-auto px-8 md:px-16 lg:px-24 py-20 md:py-28">
-      <h2 class="text-xs font-medium tracking-[0.2em] uppercase text-[#F59E0B] mb-10"><span class="opacity-70">&gt;</span> Experience</h2>
-      <div class="space-y-14">
+    <section id="experience" class="section container">
+      <h2 class="eyebrow section-label"><span class="prompt">&gt;</span> Experience</h2>
+      <div class="timeline">
 
         <article>
-          <div class="flex flex-col gap-1 mb-5">
-            <h3 class="font-display font-extrabold text-2xl md:text-3xl tracking-tight">
-              Software Developer <span class="text-[#E6EDF3]/50 font-normal">·</span> Hushmail
-            </h3>
-            <p class="text-sm text-[#E6EDF3]/60 font-mono whitespace-nowrap">May 2019 – Present</p>
+          <div class="entry-head">
+            <h3 class="entry-title">Software Developer <span class="entry-sep">·</span> Hushmail</h3>
+            <p class="entry-date">May 2019 – Present</p>
           </div>
-          <ul class="space-y-3 text-[#C9D1D9] leading-relaxed list-disc pl-5 marker:text-[#F59E0B]/60 max-w-3xl">
+          <ul class="entry-list">
             <li>Personally executed the team's full SVN→GitLab migration — evaluated GitHub, GitLab, and Bitbucket and presented the recommendation, then carried out the migration and established branching workflows for the 4-developer team; became the go-to resource for GitLab infrastructure and mirroring issues.</li>
             <li>Implemented form ownership and account transfer logic for SecureForms, a HIPAA-compliant encrypted form product serving healthcare and legal clients.</li>
             <li>Reworked authentication routing to redirect users to the correct web application based on account identity, resolving a longstanding source of user confusion.</li>
@@ -162,13 +127,11 @@
         </article>
 
         <article>
-          <div class="flex flex-col gap-1 mb-5">
-            <h3 class="font-display font-extrabold text-2xl md:text-3xl tracking-tight">
-              PHP/MySQL Developer <span class="text-[#E6EDF3]/50 font-normal">·</span> AvenueHQ Inc.
-            </h3>
-            <p class="text-sm text-[#E6EDF3]/60 font-mono whitespace-nowrap">Mar 2017 – Apr 2019</p>
+          <div class="entry-head">
+            <h3 class="entry-title">PHP/MySQL Developer <span class="entry-sep">·</span> AvenueHQ Inc.</h3>
+            <p class="entry-date">Mar 2017 – Apr 2019</p>
           </div>
-          <ul class="space-y-3 text-[#C9D1D9] leading-relaxed list-disc pl-5 marker:text-[#F59E0B]/60 max-w-3xl">
+          <ul class="entry-list">
             <li>Maintained a real estate feed ingestion system consuming RETS data from CREB, FVREB, TREB, and CREA, processing thousands to tens of thousands of listings via scheduled cron jobs.</li>
             <li>Designed and shipped a new internal API version with an extensible abstraction layer, simplifying feed-to-object transformation and allowing per-feed overrides without touching shared code.</li>
             <li>Designed and implemented database schema enhancements to support evolving feed structures and listing data.</li>
@@ -176,26 +139,22 @@
         </article>
 
         <article>
-          <div class="flex flex-col gap-1 mb-5">
-            <h3 class="font-display font-extrabold text-2xl md:text-3xl tracking-tight">
-              API Integrations Specialist <span class="text-[#E6EDF3]/50 font-normal">·</span> Eventbase Technology Inc.
-            </h3>
-            <p class="text-sm text-[#E6EDF3]/60 font-mono whitespace-nowrap">May 2015 – Feb 2017</p>
+          <div class="entry-head">
+            <h3 class="entry-title">API Integrations Specialist <span class="entry-sep">·</span> Eventbase Technology Inc.</h3>
+            <p class="entry-date">May 2015 – Feb 2017</p>
           </div>
-          <ul class="space-y-3 text-[#C9D1D9] leading-relaxed list-disc pl-5 marker:text-[#F59E0B]/60 max-w-3xl">
+          <ul class="entry-list">
             <li>Integrated REST and SOAP APIs for mobile and web event applications used at premier enterprise events including Citrix.</li>
             <li>Served as primary on-site technical contact for enterprise clients, resolving integration issues in real time at high-profile events.</li>
           </ul>
         </article>
 
         <article>
-          <div class="flex flex-col gap-1 mb-5">
-            <h3 class="font-display font-extrabold text-2xl md:text-3xl tracking-tight">
-              Software Developer (Co-op) <span class="text-[#E6EDF3]/50 font-normal">·</span> Appnovation Technologies
-            </h3>
-            <p class="text-sm text-[#E6EDF3]/60 font-mono whitespace-nowrap">Jan 2014 – Aug 2014</p>
+          <div class="entry-head">
+            <h3 class="entry-title">Software Developer (Co-op) <span class="entry-sep">·</span> Appnovation Technologies</h3>
+            <p class="entry-date">Jan 2014 – Aug 2014</p>
           </div>
-          <ul class="space-y-3 text-[#C9D1D9] leading-relaxed list-disc pl-5 marker:text-[#F59E0B]/60 max-w-3xl">
+          <ul class="entry-list">
             <li>Built CMS features and custom modules for multiple client projects.</li>
             <li>Developed and delivered a proof of concept integrating Tableau data visualizations into a CMS.</li>
           </ul>
@@ -204,67 +163,61 @@
       </div>
     </section>
 
-    <div class="max-w-screen-xl mx-auto px-8 md:px-16 lg:px-24">
-      <hr class="border-[#E6EDF3]/10" />
-    </div>
+    <div class="container"><hr class="rule" /></div>
 
     <!-- Highlights -->
-    <section id="highlights" class="max-w-screen-xl mx-auto px-8 md:px-16 lg:px-24 py-20 md:py-28">
-      <h2 class="text-xs font-medium tracking-[0.2em] uppercase text-[#F59E0B] mb-10"><span class="opacity-70">&gt;</span> Highlights</h2>
-      <ol class="space-y-10 max-w-3xl counter-reset">
-        <li class="flex gap-6">
-          <span class="font-display font-extrabold text-2xl text-[#F59E0B]/60 leading-none pt-1">01</span>
+    <section id="highlights" class="section container">
+      <h2 class="eyebrow section-label"><span class="prompt">&gt;</span> Highlights</h2>
+      <ol class="highlights">
+        <li class="highlight">
+          <span class="highlight-num">01</span>
           <div>
-            <h3 class="font-display font-extrabold text-xl md:text-2xl tracking-tight mb-2">SVN → GitLab migration at Hushmail</h3>
-            <p class="text-[#C9D1D9] leading-relaxed">Evaluated GitHub, GitLab, and Bitbucket and presented the recommendation, then personally carried out the team's SVN→GitLab migration and set up branching workflows for the 4-dev team. Became the go-to for GitLab infrastructure and mirroring issues.</p>
+            <h3 class="highlight-title">SVN → GitLab migration at Hushmail</h3>
+            <p class="highlight-body">Evaluated GitHub, GitLab, and Bitbucket and presented the recommendation, then personally carried out the team's SVN→GitLab migration and set up branching workflows for the 4-dev team. Became the go-to for GitLab infrastructure and mirroring issues.</p>
           </div>
         </li>
-        <li class="flex gap-6">
-          <span class="font-display font-extrabold text-2xl text-[#F59E0B]/60 leading-none pt-1">02</span>
+        <li class="highlight">
+          <span class="highlight-num">02</span>
           <div>
-            <h3 class="font-display font-extrabold text-xl md:text-2xl tracking-tight mb-2">Stripe payment platform migration at Hushmail</h3>
-            <p class="text-[#C9D1D9] leading-relaxed">Shipped product and discount setup, subscription migration, custom reseller billing, and a hybrid PayPal integration that kept PayPal as a payment method while moving subscription management to Stripe.</p>
+            <h3 class="highlight-title">Stripe payment platform migration at Hushmail</h3>
+            <p class="highlight-body">Shipped product and discount setup, subscription migration, custom reseller billing, and a hybrid PayPal integration that kept PayPal as a payment method while moving subscription management to Stripe.</p>
           </div>
         </li>
-        <li class="flex gap-6">
-          <span class="font-display font-extrabold text-2xl text-[#F59E0B]/60 leading-none pt-1">03</span>
+        <li class="highlight">
+          <span class="highlight-num">03</span>
           <div>
-            <h3 class="font-display font-extrabold text-xl md:text-2xl tracking-tight mb-2">Cron-backed Stripe pricing cache at Hushmail</h3>
-            <p class="text-[#C9D1D9] leading-relaxed">Replaced per-request Stripe API calls — which rebuilt a short-lived Products/Prices array on nearly every page load — with a cron job that pulls Products, Prices, and Features into a file cache. Cleaned up Stripe Product/Price metadata and adopted Product Features along the way, cutting API calls and rate-limit risk, removing a request-path dependency on Stripe, and speeding up page loads.</p>
+            <h3 class="highlight-title">Cron-backed Stripe pricing cache at Hushmail</h3>
+            <p class="highlight-body">Replaced per-request Stripe API calls — which rebuilt a short-lived Products/Prices array on nearly every page load — with a cron job that pulls Products, Prices, and Features into a file cache. Cleaned up Stripe Product/Price metadata and adopted Product Features along the way, cutting API calls and rate-limit risk, removing a request-path dependency on Stripe, and speeding up page loads.</p>
           </div>
         </li>
-        <li class="flex gap-6">
-          <span class="font-display font-extrabold text-2xl text-[#F59E0B]/60 leading-none pt-1">04</span>
+        <li class="highlight">
+          <span class="highlight-num">04</span>
           <div>
-            <h3 class="font-display font-extrabold text-xl md:text-2xl tracking-tight mb-2">“Most Innovative” — AvenueHQ Hackathon 2018</h3>
-            <p class="text-[#C9D1D9] leading-relaxed">Won the Most Innovative award with a teammate for an automation that turns an MLS listing's photos into a ready-to-post video, giving real estate agents marketing content to share on social media.</p>
+            <h3 class="highlight-title">“Most Innovative” — AvenueHQ Hackathon 2018</h3>
+            <p class="highlight-body">Won the Most Innovative award with a teammate for an automation that turns an MLS listing's photos into a ready-to-post video, giving real estate agents marketing content to share on social media.</p>
           </div>
         </li>
-        <li class="flex gap-6">
-          <span class="font-display font-extrabold text-2xl text-[#F59E0B]/60 leading-none pt-1">05</span>
+        <li class="highlight">
+          <span class="highlight-num">05</span>
           <div>
-            <h3 class="font-display font-extrabold text-xl md:text-2xl tracking-tight mb-2">Extensible feed-ingestion API at AvenueHQ</h3>
-            <p class="text-[#C9D1D9] leading-relaxed">Designed a new internal API version with an abstraction layer that simplified RETS feed-to-object transformation and allowed per-feed overrides without touching shared code.</p>
+            <h3 class="highlight-title">Extensible feed-ingestion API at AvenueHQ</h3>
+            <p class="highlight-body">Designed a new internal API version with an abstraction layer that simplified RETS feed-to-object transformation and allowed per-feed overrides without touching shared code.</p>
           </div>
         </li>
       </ol>
     </section>
 
-    <div class="max-w-screen-xl mx-auto px-8 md:px-16 lg:px-24">
-      <hr class="border-[#E6EDF3]/10" />
-    </div>
+    <div class="container"><hr class="rule" /></div>
 
     <!-- Education -->
-    <section id="education" class="max-w-screen-xl mx-auto px-8 md:px-16 lg:px-24 py-20 md:py-28">
-      <h2 class="text-xs font-medium tracking-[0.2em] uppercase text-[#F59E0B] mb-10"><span class="opacity-70">&gt;</span> Education</h2>
+    <section id="education" class="section container">
+      <h2 class="eyebrow section-label"><span class="prompt">&gt;</span> Education</h2>
       <article>
-        <div class="flex flex-col gap-1 mb-5">
-          <h3 class="font-display font-extrabold text-2xl md:text-3xl tracking-tight">
-            Diploma of Technology <span class="text-[#E6EDF3]/50 font-normal">·</span> British Columbia Institute of Technology
-          </h3>
-          <p class="text-sm text-[#E6EDF3]/60 font-mono whitespace-nowrap">Jan 2013 – May 2015</p>
+        <div class="entry-head">
+          <h3 class="entry-title">Diploma of Technology <span class="entry-sep">·</span> British Columbia Institute of Technology</h3>
+          <p class="entry-date">Jan 2013 – May 2015</p>
         </div>
-        <ul class="space-y-3 text-[#C9D1D9] leading-relaxed list-disc pl-5 marker:text-[#F59E0B]/60 max-w-3xl">
+        <ul class="entry-list">
           <li>Computer Systems Technology — Web and Mobile Option.</li>
           <li>Focused on PHP, JavaScript, ASP.net, Android, and iOS development.</li>
         </ul>
@@ -272,8 +225,8 @@
     </section>
   </main>
 
-  <footer class="max-w-screen-xl mx-auto px-8 md:px-16 lg:px-24 py-8 border-t border-[#E6EDF3]/10">
-    <p class="text-sm text-[#E6EDF3]/55">© 2026 Paolo Montano</p>
+  <footer class="footer container">
+    <p class="footer-text">© 2026 Paolo Montano</p>
   </footer>
 
 </body>
