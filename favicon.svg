@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <rect width="32" height="32" rx="6" fill="#0D1117"/>
+  <text x="16" y="16" text-anchor="middle" dominant-baseline="central"
+        font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace"
+        font-size="22" font-weight="800" fill="#F59E0B">P</text>
+</svg>
