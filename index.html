@@ -110,11 +110,11 @@
             <p class="entry-date">May 2019 – Present</p>
           </div>
           <ul class="entry-list">
-            <li>Personally executed the team's full SVN→GitLab migration — evaluated GitHub, GitLab, and Bitbucket and presented the recommendation, then carried out the migration and established branching workflows for the 4-developer team; became the go-to resource for GitLab infrastructure and mirroring issues.</li>
-            <li>Implemented form ownership and account transfer logic for SecureForms, a HIPAA-compliant encrypted form product serving healthcare and legal clients.</li>
-            <li>Reworked authentication routing to redirect users to the correct web application based on account identity, resolving a longstanding source of user confusion.</li>
-            <li>Contributed to payment platform migration from eXact to Stripe, implementing product and discount setup, subscription migration, custom reseller billing logic, and a hybrid PayPal integration that retained PayPal as the payment method while moving subscription management to Stripe.</li>
-            <li>Became the team's go-to for third-party integration issues, particularly Stripe/PayPal billing sync and other external APIs.</li>
+            <li>Modernized source control for a 4-developer team by evaluating GitHub, GitLab, and Bitbucket, recommending GitLab, and leading the complete SVN→GitLab migration; established branching workflows and became the team's go-to resource for GitLab infrastructure and mirroring issues.</li>
+            <li>Enabled form ownership changes and account transfers in SecureForms, a HIPAA-compliant encrypted form product serving healthcare and legal clients.</li>
+            <li>Resolved a longstanding source of user confusion by reworking authentication routing to send users to the correct web application based on account identity.</li>
+            <li>Helped move subscription management from eXact to Stripe by implementing product and discount setup, subscription migration, custom reseller billing, and a hybrid integration that preserved PayPal as a payment method.</li>
+            <li>Owned resolution of third-party integration issues, particularly Stripe/PayPal billing synchronization and other external APIs.</li>
             <li>Maintained and extended backend PHP systems supporting core privacy-focused email infrastructure.</li>
           </ul>
         </article>
@@ -125,9 +125,9 @@
             <p class="entry-date">Mar 2017 – Apr 2019</p>
           </div>
           <ul class="entry-list">
-            <li>Maintained a real estate feed ingestion system consuming RETS data from CREB, FVREB, TREB, and CREA, processing thousands to tens of thousands of listings via scheduled cron jobs.</li>
-            <li>Designed and shipped a new internal API version with an extensible abstraction layer, simplifying feed-to-object transformation and allowing per-feed overrides without touching shared code.</li>
-            <li>Designed and implemented database schema enhancements to support evolving feed structures and listing data.</li>
+            <li>Processed thousands to tens of thousands of real estate listings through scheduled RETS imports from CREB, FVREB, TREB, and CREA.</li>
+            <li>Made per-feed customization possible without changing shared code by designing and shipping a new internal API version with an extensible feed-to-object transformation layer.</li>
+            <li>Supported evolving feed structures and listing data by designing and implementing database schema enhancements.</li>
           </ul>
         </article>
 
@@ -137,8 +137,8 @@
             <p class="entry-date">May 2015 – Feb 2017</p>
           </div>
           <ul class="entry-list">
-            <li>Integrated REST and SOAP APIs for mobile and web event applications used at premier enterprise events including Citrix.</li>
-            <li>Served as primary on-site technical contact for enterprise clients, resolving integration issues in real time at high-profile events.</li>
+            <li>Delivered REST and SOAP API integrations for mobile and web applications used at premier enterprise events including Citrix.</li>
+            <li>Resolved enterprise integration issues in real time as the primary on-site technical contact at high-profile events.</li>
           </ul>
         </article>
 
@@ -148,8 +148,8 @@
             <p class="entry-date">Jan 2014 – Aug 2014</p>
           </div>
           <ul class="entry-list">
-            <li>Built CMS features and custom modules for multiple client projects.</li>
-            <li>Developed and delivered a proof of concept integrating Tableau data visualizations into a CMS.</li>
+            <li>Delivered CMS features and custom modules across multiple client projects.</li>
+            <li>Demonstrated a Tableau-in-CMS integration by developing and delivering a working proof of concept.</li>
           </ul>
         </article>
 
@@ -166,21 +166,21 @@
           <span class="highlight-num">01</span>
           <div>
             <h3 class="highlight-title">SVN → GitLab migration at Hushmail</h3>
-            <p class="highlight-body">Evaluated GitHub, GitLab, and Bitbucket and presented the recommendation, then personally carried out the team's SVN→GitLab migration and set up branching workflows for the 4-dev team. Became the go-to for GitLab infrastructure and mirroring issues.</p>
+            <p class="highlight-body">Modernized source control for a 4-developer team by evaluating GitHub, GitLab, and Bitbucket, recommending GitLab, and leading the complete SVN→GitLab migration. Established branching workflows and became the team's go-to resource for GitLab infrastructure and mirroring issues.</p>
           </div>
         </li>
         <li class="highlight">
           <span class="highlight-num">02</span>
           <div>
             <h3 class="highlight-title">Stripe payment platform migration at Hushmail</h3>
-            <p class="highlight-body">Shipped product and discount setup, subscription migration, custom reseller billing, and a hybrid PayPal integration that kept PayPal as a payment method while moving subscription management to Stripe.</p>
+            <p class="highlight-body">Moved subscription management from eXact to Stripe while preserving PayPal as a payment method. Shipped product and discount setup, subscription migration, custom reseller billing, and the hybrid PayPal integration.</p>
           </div>
         </li>
         <li class="highlight">
           <span class="highlight-num">03</span>
           <div>
             <h3 class="highlight-title">Cron-backed Stripe pricing cache at Hushmail</h3>
-            <p class="highlight-body">Replaced per-request Stripe API calls — which rebuilt a short-lived Products/Prices array on nearly every page load — with a cron job that pulls Products, Prices, and Features into a file cache. Cleaned up Stripe Product/Price metadata and adopted Product Features along the way, cutting API calls and rate-limit risk, removing a request-path dependency on Stripe, and speeding up page loads.</p>
+            <p class="highlight-body">Removed Stripe from the page-request path by replacing near-per-request API calls with a cron-backed file cache for Products, Prices, and Features. The change cut API calls and rate-limit exposure, eliminated a request-path dependency on Stripe, and sped up page loads while improving Product and Price metadata.</p>
           </div>
         </li>
         <li class="highlight">
@@ -194,7 +194,7 @@
           <span class="highlight-num">05</span>
           <div>
             <h3 class="highlight-title">Extensible feed-ingestion API at AvenueHQ</h3>
-            <p class="highlight-body">Designed a new internal API version with an abstraction layer that simplified RETS feed-to-object transformation and allowed per-feed overrides without touching shared code.</p>
+            <p class="highlight-body">Enabled per-feed overrides without changes to shared code by designing a new internal API version with an extensible RETS feed-to-object transformation layer.</p>
           </div>
         </li>
       </ol>
